@@ -34,10 +34,12 @@ jobs:
         with:
         
         cmd: install
+     
       - name: creating build
-         run: yarn build
+         run:  yarn build
          
       - name: installing surge
          run: npm install -g surge
+    
      -  name: deploying on surge
          run: surge ./build http://drunk-sense.surge.sh/ --token ${{secrets.SURGE_TOKEN}} 
