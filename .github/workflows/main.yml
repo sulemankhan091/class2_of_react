@@ -34,9 +34,11 @@ jobs:
         with:
         
         cmd: install
+      - name: install yarn
+         run: npm -g install yarn
      
       - name: creating build
-         run:  https://yarn.pm/yarn-build
+         run:  yarn build
          
       - name: installing surge
          run: npm install -g surge
