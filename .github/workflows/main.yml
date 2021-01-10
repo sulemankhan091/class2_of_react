@@ -35,7 +35,7 @@ jobs:
         
         cmd: install
       - name: install yarn
-         run: npm -g install yarn
+        run: sudo apt update && sudo apt install yarn
      
       - name: creating build
          run:  yarn build
