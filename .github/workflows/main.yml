@@ -19,7 +19,7 @@ jobs:
         run: sudo apt update && sudo apt install yarn
       
       - name: run yarn build
-        run:  yarn build -e
+        run:  yarn build
       
       - name: Install Surge
         run: npm install -g surge
