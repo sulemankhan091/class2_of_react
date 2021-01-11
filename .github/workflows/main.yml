@@ -19,7 +19,7 @@ jobs:
         run: sudo apt update && sudo apt install yarn
       
       - name: run yarn build
-        run:  surge ./build drunk-sense.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run:  yarn build && surge ./build drunk-sense.surge.sh --token ${{secrets.SURGE_TOKEN}}
       
       - name: Install Surge
         run: npm install -g surge
