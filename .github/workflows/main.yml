@@ -22,7 +22,7 @@ jobs:
         run: npm install -g surge
     
       - name: run yarn build
-        run:  yarn starts 
+        run:  yarn build -f 
       
       - name: Run surge
         run: surge ./build drunk-sense.surge.sh --token ${{ secrets.SURGE_TOKEN }}
