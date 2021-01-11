@@ -18,12 +18,12 @@ jobs:
       - name: install yarn
         run: sudo apt update && sudo apt install yarn
       
-      - name: run yarn build
-        run:  yarn build 
-      
       - name: Install Surge
         run: npm install -g surge
     
+      - name: run yarn build
+        run:  yarn build 
+      
       - name: Run surge
         run: surge ./build drunk-sense.surge.sh --token ${{ secrets.SURGE_TOKEN }}
 
