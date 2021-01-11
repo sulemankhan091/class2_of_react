@@ -15,16 +15,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+     "build": "react-scripts build",
+     "test": "react-scripts test",
     "eject": "react-scripts eject",
-      "name": "my-package",
-      "scripts": {
-        "build": "babel src -d lib",
-        "test": "jest"
-      }
-    
-  },
+     "name": "my-package",
+      "build_yarn": "babel src -d lib",
+        "test_yarn": "jest"
+       },
   "eslintConfig": {
     "extends": [
       "react-app",
