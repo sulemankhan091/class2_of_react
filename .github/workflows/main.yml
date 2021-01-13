@@ -16,10 +16,16 @@ jobs:
         run: curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
         # uses: Borales/actions-yarn@2.1.0
       
+        # Install Yarn
+      - name: Install Yarn
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+          cmd: install #will run 'yarn install'
+
       - name: install yarn
         run: sudo apt update && sudo apt install yarn
       
-      - name: creating production build
+      - name: Creating production build
         run:  yarn build  
       
       - name: Install Surge
