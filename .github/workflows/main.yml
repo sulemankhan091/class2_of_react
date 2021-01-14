@@ -23,15 +23,15 @@ jobs:
           cmd: install #will run 'yarn install'
 
       - name: install yarn
-        run: sudo apt update && sudo apt install yarn
+        run:  sudo apt update && sudo apt install yarn
       
       - name: Creating production build
         run:  yarn build  
       
       - name: Install Surge
-        run: npm install -g surge
+        run:  npm install -g surge
     
       - name: Run surge
-        run: surge ./build drunk-sense.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run:  surge ./build drunk-sense.surge.sh --token ${{ secrets.SURGE_TOKEN }}
 
           
